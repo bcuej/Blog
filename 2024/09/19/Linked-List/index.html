@@ -18,14 +18,17 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="article">
-<meta property="og:title" content="Linked_List">
+        <meta name="description" content="现在看指针真的简单好多。😶‍🌫️😶‍🌫️😶‍🌫️">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linked_List (unfinished)">
 <meta property="og:url" content="http://example.com/2024/09/19/Linked-List/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="现在看指针真的简单好多。😶‍🌫️😶‍🌫️😶‍🌫️">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-19T12:59:42.000Z">
-<meta property="article:modified_time" content="2024-09-19T12:59:42.902Z">
+<meta property="article:modified_time" content="2024-09-19T13:50:33.869Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="tech">
 <meta name="twitter:card" content="summary">
     
     
@@ -38,7 +41,7 @@
     
     <title>
         
-            Linked_List -
+            Linked_List (unfinished) -
         
         Pomni&#39;s Home
     </title>
@@ -346,7 +349,7 @@
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
@@ -376,7 +379,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Linked_List</h1>
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Linked_List (unfinished)</h1>
                 </div>
             
             </div>
@@ -404,20 +407,51 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-19 20:59:42</span>
-            <span class="mobile">2024-09-19 20:59:42</span>
+            <span class="desktop">2024-09-19 21:50:33</span>
+            <span class="mobile">2024-09-19 21:50:33</span>
             <span class="hover-info">Updated</span>
         </span>
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/C-language/">C language</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/tech/">tech</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.3k Words</span>
+        </span>
+    
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
         </span>
     
     
@@ -436,21 +470,63 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            
+            <p>最近在学习线性表中的链表，正好<del>预习</del>复习一下。</p>
+<h1 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h1><p>不停地翻炒知识，才能收获真正的味道。<br>虽然现在还是有很多问题，但是在慢慢解决了。  </p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#结构体定义</span></span><br><span class="line">typedef struct LNode</span><br><span class="line">&#123;</span><br><span class="line">	int key;</span><br><span class="line">	struct LNode* next;</span><br><span class="line">&#125;LNode;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="创建链表"><a href="#创建链表" class="headerlink" title="创建链表"></a>创建链表</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#尾接入法</span></span><br><span class="line">LNode* <span class="function"><span class="title">Create_a_list</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">head</span> == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">return</span> NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	//如果<span class="built_in">head</span>内存分配失败的话，返回NULL。</span><br><span class="line">	//提高代码的健壮性和安全性。</span><br><span class="line"></span><br><span class="line">	LNode* <span class="built_in">tail</span> = <span class="built_in">head</span>;</span><br><span class="line">	//tail = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	<span class="built_in">tail</span>-&gt;next = NULL;</span><br><span class="line">	int value;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (scanf(<span class="string">&quot;%d&quot;</span>, &amp;value)==1)//如果输入的是非数值字符将会停止循环</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (value &lt;= 0)</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		LNode* p = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">		p-&gt;key = value;</span><br><span class="line">		p-&gt;next = NULL;//最新一个节点的next一定为NULL</span><br><span class="line">		<span class="built_in">tail</span>-&gt;next = p;//将新节点与链表最后一个节点相连</span><br><span class="line">		<span class="built_in">tail</span> = p;//将指示指针移动到新节点处</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>-&gt;next;//返回的是有效的第一个节点</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#头接入法</span></span><br><span class="line">LNode* <span class="function"><span class="title">Create_a_list</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">head</span> == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">return</span> NULL;//对<span class="built_in">head</span>是否成功分配内存进行判断。</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">head</span>-&gt;next = NULL;</span><br><span class="line">	int n, i;</span><br><span class="line">	scanf(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (i = 0; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int value;</span><br><span class="line">		scanf(<span class="string">&quot;%d&quot;</span>, &amp;value);</span><br><span class="line">		LNode* p = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">		p-&gt;key = value;</span><br><span class="line">		p-&gt;next = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">		<span class="built_in">head</span>-&gt;next = p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>-&gt;next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips"><a href="#💡Tips" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>当一个结构体指针需要存东西的时候，就要开辟内存空间。如果它只是复制其他的指针，则不需要开辟空间。</li>
+<li>此处代码返回的是 <strong>LNode</strong>* 类型，所以要返回指针。在创建链表中，就要返回头节点指针。此处的 <strong>head-&gt;next</strong> 指向的是有效的第一个节点。</li>
+<li>安全性检查。</li>
+</ul>
+<h2 id="打印链表"><a href="#打印链表" class="headerlink" title="打印链表"></a>打印链表</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void Print_a_list(LNode* L)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p;</span><br><span class="line">	p = L;</span><br><span class="line">	<span class="keyword">while</span> (p-&gt;next != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d-&gt;&quot;</span>, p-&gt;key);</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, p-&gt;key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="删除链表"><a href="#删除链表" class="headerlink" title="删除链表"></a>删除链表</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void Delete_a_list(LNode* L)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = L;</span><br><span class="line">	<span class="keyword">while</span> (p != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		p = L-&gt;next;</span><br><span class="line">		free(L);</span><br><span class="line">		L = p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (L == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;It&#x27;s done.\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips-1"><a href="#💡Tips-1" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>一般是用两个指针并行移动，一个负责记录和保存，另一个负责删改和变换。此处就是p和L。</li>
+</ul>
+<h2 id="返回链表节点值"><a href="#返回链表节点值" class="headerlink" title="返回链表节点值"></a>返回链表节点值</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">int Get_value(LNode* L, int i)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = L;</span><br><span class="line">	int j = 0;</span><br><span class="line"></span><br><span class="line">	/*</span><br><span class="line">	<span class="keyword">for</span> (; j &lt; i-1; j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	*/</span><br><span class="line"></span><br><span class="line">	//改进</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">head</span> != NULL &amp;&amp; j &lt; i - 1)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">		j++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">head</span> == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">return</span> 0;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">head</span>-&gt;key);</span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>-&gt;key;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips-2"><a href="#💡Tips-2" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>返回类型据结构体具体内容而定，以及其中的一些细节输出也要视具体的结构体而定。</li>
+<li>依旧是注意安全性检查。</li>
+</ul>
+<h2 id="插入元素"><a href="#插入元素" class="headerlink" title="插入元素"></a>插入元素</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回结构体类型</span></span><br><span class="line">LNode* List_insert(LNode* L, int value, int location)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = L;</span><br><span class="line">	LNode* p = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	p-&gt;key = value;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (location==1)</span><br><span class="line">	&#123;</span><br><span class="line">		p-&gt;next = <span class="built_in">head</span>;</span><br><span class="line">		<span class="built_in">head</span> = p;</span><br><span class="line">		<span class="built_in">return</span> <span class="built_in">head</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	int i = 1;</span><br><span class="line">	<span class="keyword">while</span> (location &gt; i &amp;&amp; <span class="built_in">head</span>-&gt;next!=NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	p-&gt;next = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">	<span class="built_in">head</span>-&gt;next = p;</span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>注意返回的是指针类型。因为如果头节点被修改，那么该链表的头节点指针需要更新。</li>
+</ul>
+<p>但是，返回类型也可以是void。</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回void类型</span></span><br><span class="line">void List_insert(LNode** L, int value, int location)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = *L;//注意这里指针是指向头节点的指针</span><br><span class="line">	LNode* p = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	p-&gt;key = value;</span><br><span class="line">	<span class="keyword">if</span> (location == 1)</span><br><span class="line">	&#123;</span><br><span class="line">		p-&gt;next = <span class="built_in">head</span>;</span><br><span class="line">		<span class="built_in">head</span> = p;</span><br><span class="line">		*L = <span class="built_in">head</span>;//只需要在location为1的时候更新头节点即可</span><br><span class="line">		<span class="built_in">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	int i = 1;</span><br><span class="line">	<span class="keyword">while</span> (i &lt; location &amp;&amp; <span class="built_in">head</span>-&gt;next != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	p-&gt;next = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">	<span class="built_in">head</span>-&gt;next = p;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips-3"><a href="#💡Tips-3" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>因为你要修改指针，所以要传指针的指针。即你要修改什么，就传那个东西的指针。</li>
+<li>传指针和传值的区别：<br>  🔍传指针：实际上传的是指针指向的某个变量的地址，那么你在函数体内修改指针，就是在修改这个地址储存的内容，是从根本上修改。<br>  🔍传值：在函数传参中，传值传参只是创建了该变量的副本，在函数体内的修改也只是对副本进行修改，并没有对本体造成实质性的改变。</li>
+</ul>
+<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LNode* List_delete(LNode* L, int location)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = L,*p = L;</span><br><span class="line"></span><br><span class="line">	int i = 1;</span><br><span class="line">	<span class="keyword">while</span> (i &lt; location-1 &amp;&amp; p != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	LNode* p1 = p-&gt;next;</span><br><span class="line">	p-&gt;next = p1-&gt;next;</span><br><span class="line">	free(p1);</span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="返回指定位置的元素"><a href="#返回指定位置的元素" class="headerlink" title="返回指定位置的元素"></a>返回指定位置的元素</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LNode* Get_location(LNode* L, int value)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = L;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (p != NULL &amp;&amp; p-&gt;key != value)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (p == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;该节点不存在\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="删除指定值的第一个节点"><a href="#删除指定值的第一个节点" class="headerlink" title="删除指定值的第一个节点"></a>删除指定值的第一个节点</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void Delete_pointed_key(LNode** L, int value)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = *L;</span><br><span class="line">	LNode* q=NULL;</span><br><span class="line">	<span class="keyword">while</span> (p-&gt;next != NULL &amp;&amp; p-&gt;key != value)</span><br><span class="line">	&#123;</span><br><span class="line">		q = p;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (q == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		*L = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">	&#123;</span><br><span class="line">		q-&gt;next = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	free(p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	LNode* list = Create_a_list();</span><br><span class="line">	Print_a_list(list);</span><br><span class="line">	Get_value(list, 3);</span><br><span class="line">	Delete_a_list(list);</span><br><span class="line">	LNode* list2 = Create_a_list();</span><br><span class="line">	list2=List_insert(list2, 7, 1);</span><br><span class="line">	list2=List_insert(list2, 7, 1);</span><br><span class="line">	Print_a_list(list2);</span><br><span class="line">	list2=List_delete(list2, 3);</span><br><span class="line">	Print_a_list(list2);</span><br><span class="line">	Delete_pointed_key(&amp;list2, 7);</span><br><span class="line">	Print_a_list(list2);</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips-4"><a href="#💡Tips-4" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>返回类型不为空时，要有相同类型的对象“去接住这个函数的返回结果”。e.g. list2&#x3D;List_insert(list2, 7, 1);中的list2。</li>
+</ul>
+
         </div>
 
         
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Linked_List</li>
+        <li><strong>Title:</strong> Linked_List (unfinished)</li>
         <li><strong>Author:</strong> Pomni</li>
         <li><strong>Created at
                 :</strong> 2024-09-19 20:59:42</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-19 20:59:42
+                    :</strong> 2024-09-19 21:50:33
             </li>
         
         <li>
@@ -472,6 +548,14 @@
             </div>
         
 
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/tech/">#tech</a>&nbsp;
+                    </li>
+                
+            </ul>
         
 
         
@@ -549,8 +633,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Linked_List</div>
-        
+        <div class="page-title">Linked_List (unfinished)</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8A%E4%BB%A3%E7%A0%81"><span class="nav-text">直接上代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%93%BE%E8%A1%A8"><span class="nav-text">创建链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8"><span class="nav-text">打印链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8"><span class="nav-text">删除链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-1"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E9%93%BE%E8%A1%A8%E8%8A%82%E7%82%B9%E5%80%BC"><span class="nav-text">返回链表节点值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-2"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%85%83%E7%B4%A0"><span class="nav-text">插入元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-3"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="nav-text">删除元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-text">返回指定位置的元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%8C%87%E5%AE%9A%E5%80%BC%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%8A%82%E7%82%B9"><span class="nav-text">删除指定值的第一个节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#main%E5%87%BD%E6%95%B0"><span class="nav-text">main函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-4"><span class="nav-text">💡Tips</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
@@ -589,7 +673,7 @@
                     </span>
                     
                         <span>
-                            3k words in total
+                            4.3k words in total
                         </span>
                     
                 </p>
