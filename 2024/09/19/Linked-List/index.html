@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Pomni">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/09/19/linked-list/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="现在看指针真的简单好多。😶‍🌫️😶‍🌫️😶‍🌫️">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linked_List (finished)">
+<meta property="og:url" content="http://example.com/2024/09/19/Linked-List/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="现在看指针真的简单好多。😶‍🌫️😶‍🌫️😶‍🌫️">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-09-19T12:59:42.000Z">
+<meta property="article:modified_time" content="2024-09-22T09:35:26.165Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="tech">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Linked_List (finished) -
+        
+        Pomni&#39;s Home
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/background.webp","dark":"/images/background.webp"},"title":"Carpe Diem","subtitle":{"text":["P0mn1_n3v3r_j4d3d","Right?..."],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.0","navbar":{"auto_hide":true,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"https://www.xiaohongshu.com/user/profile/5d15efcb00000000110006cd?xhsshare=CopyLink&appuid=5d15efcb00000000110006cd&apptime=1725501303&share_id=d236afa6d86049d2b01742520bb8f96a","Github":"https://github.com/bcuej"}},"Links":{"icon":"fa-regular fa-link"}},"search":{"enable":false,"preload":true},"tags":{"Tag":null}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/9/4 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Pomni&#39;s Home
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/5d15efcb00000000110006cd?xhsshare=CopyLink&appuid=5d15efcb00000000110006cd&apptime=1725501303&share_id=d236afa6d86049d2b01742520bb8f96a">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/bcuej">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/5d15efcb00000000110006cd?xhsshare=CopyLink&appuid=5d15efcb00000000110006cd&apptime=1725501303&share_id=d236afa6d86049d2b01742520bb8f96a">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/bcuej">GITHUB</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-regular fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Linked_List (finished)</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Pomni</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-09-19 20:59:42</span>
+        <span class="mobile">2024-09-19 20:59:42</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-09-22 17:35:26</span>
+            <span class="mobile">2024-09-22 17:35:26</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/C-language/">C language</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/tech/">tech</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>11 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>最近在学习线性表中的链表，正好<del>预习</del>复习一下。<br>main函数在文末。</p>
+<h1 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h1><p>不停地翻炒知识，才能收获真正的味道。<br>虽然现在还是有很多问题，但是在慢慢解决了。  </p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#结构体定义</span></span><br><span class="line">typedef struct LNode</span><br><span class="line">&#123;</span><br><span class="line">	int key;</span><br><span class="line">	struct LNode* next;</span><br><span class="line">&#125;LNode;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="创建链表"><a href="#创建链表" class="headerlink" title="创建链表"></a>创建链表</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#尾接入法</span></span><br><span class="line">LNode* <span class="function"><span class="title">Create_a_list</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">head</span> == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">return</span> NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	//如果<span class="built_in">head</span>内存分配失败的话，返回NULL。</span><br><span class="line">	//提高代码的健壮性和安全性。</span><br><span class="line"></span><br><span class="line">	LNode* <span class="built_in">tail</span> = <span class="built_in">head</span>;</span><br><span class="line">	//tail = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	<span class="built_in">tail</span>-&gt;next = NULL;</span><br><span class="line">	int value;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (scanf(<span class="string">&quot;%d&quot;</span>, &amp;value)==1)//如果输入的是非数值字符将会停止循环</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (value &lt;= 0)</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		LNode* p = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">		p-&gt;key = value;</span><br><span class="line">		p-&gt;next = NULL;//最新一个节点的next一定为NULL</span><br><span class="line">		<span class="built_in">tail</span>-&gt;next = p;//将新节点与链表最后一个节点相连</span><br><span class="line">		<span class="built_in">tail</span> = p;//将指示指针移动到新节点处</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>-&gt;next;//返回的是有效的第一个节点</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#头接入法</span></span><br><span class="line">LNode* <span class="function"><span class="title">Create_a_list</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">head</span> == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">return</span> NULL;//对<span class="built_in">head</span>是否成功分配内存进行判断。</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">head</span>-&gt;next = NULL;</span><br><span class="line">	int n, i;</span><br><span class="line">	scanf(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (i = 0; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int value;</span><br><span class="line">		scanf(<span class="string">&quot;%d&quot;</span>, &amp;value);</span><br><span class="line">		LNode* p = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">		p-&gt;key = value;</span><br><span class="line">		p-&gt;next = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">		<span class="built_in">head</span>-&gt;next = p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>-&gt;next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips"><a href="#💡Tips" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>当一个结构体指针需要存东西的时候，就要开辟内存空间。如果它只是复制其他的指针，则不需要开辟空间。</li>
+<li>此处代码返回的是 <strong>LNode</strong>* 类型，所以要返回指针。在创建链表中，就要返回头节点指针。此处的 <strong>head-&gt;next</strong> 指向的是有效的第一个节点。</li>
+<li>安全性检查。</li>
+</ul>
+<h2 id="打印链表"><a href="#打印链表" class="headerlink" title="打印链表"></a>打印链表</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void Print_a_list(LNode* L)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p;</span><br><span class="line">	p = L;</span><br><span class="line">	<span class="keyword">while</span> (p-&gt;next != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d-&gt;&quot;</span>, p-&gt;key);</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, p-&gt;key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="删除链表"><a href="#删除链表" class="headerlink" title="删除链表"></a>删除链表</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void Delete_a_list(LNode* L)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = L;</span><br><span class="line">	<span class="keyword">while</span> (p != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		p = L-&gt;next;</span><br><span class="line">		free(L);</span><br><span class="line">		L = p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (L == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;It&#x27;s done.\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips-1"><a href="#💡Tips-1" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>一般是用两个指针并行移动，一个负责记录和保存，另一个负责删改和变换。此处就是p和L。</li>
+</ul>
+<h2 id="返回链表长度"><a href="#返回链表长度" class="headerlink" title="返回链表长度"></a>返回链表长度</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int Get_length(LNode* L)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = L;</span><br><span class="line">	int i = 0;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">head</span> != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		i++;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips-2"><a href="#💡Tips-2" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>虽然很简单，但仍要强调一下，避免犯一些蠢钝如猪的错误。🐷🐷🐷<br>这里用头节点自身移动没什么太大问题，但是在链表的元素有改动的时候，记得另外定义一个节点复制头节点的值来<strong>保存头节点指针</strong>。如果直接移动头节点指针，那么整个链表就乱套了。😖😖😖</li>
+</ul>
+<h2 id="返回链表节点值"><a href="#返回链表节点值" class="headerlink" title="返回链表节点值"></a>返回链表节点值</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">int Get_value(LNode* L, int i)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = L;</span><br><span class="line">	int j = 0;</span><br><span class="line"></span><br><span class="line">	/*</span><br><span class="line">	<span class="keyword">for</span> (; j &lt; i-1; j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	*/</span><br><span class="line"></span><br><span class="line">	//改进</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">head</span> != NULL &amp;&amp; j &lt; i - 1)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">		j++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">head</span> == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">return</span> 0;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">head</span>-&gt;key);</span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>-&gt;key;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips-3"><a href="#💡Tips-3" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>返回类型据结构体具体内容而定，以及其中的一些细节输出也要视具体的结构体而定。</li>
+<li>依旧是注意安全性检查。</li>
+</ul>
+<h2 id="插入元素"><a href="#插入元素" class="headerlink" title="插入元素"></a>插入元素</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回结构体类型</span></span><br><span class="line">LNode* List_insert(LNode* L, int value, int location)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = L;</span><br><span class="line">	LNode* p = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	p-&gt;key = value;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (location==1)</span><br><span class="line">	&#123;</span><br><span class="line">		p-&gt;next = <span class="built_in">head</span>;</span><br><span class="line">		<span class="built_in">head</span> = p;</span><br><span class="line">		<span class="built_in">return</span> <span class="built_in">head</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	int i = 1;</span><br><span class="line">	<span class="keyword">while</span> (location &gt; i &amp;&amp; <span class="built_in">head</span>-&gt;next!=NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	p-&gt;next = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">	<span class="built_in">head</span>-&gt;next = p;</span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>注意返回的是指针类型。因为如果头节点被修改，那么该链表的头节点指针需要更新。</li>
+</ul>
+<p>但是，返回类型也可以是void。</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回void类型</span></span><br><span class="line">void List_insert(LNode** L, int value, int location)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = *L;//注意这里指针是指向头节点的指针</span><br><span class="line">	LNode* p = (LNode*)malloc(sizeof(LNode));</span><br><span class="line">	p-&gt;key = value;</span><br><span class="line">	<span class="keyword">if</span> (location == 1)</span><br><span class="line">	&#123;</span><br><span class="line">		p-&gt;next = <span class="built_in">head</span>;</span><br><span class="line">		<span class="built_in">head</span> = p;</span><br><span class="line">		*L = <span class="built_in">head</span>;//只需要在location为1的时候更新头节点即可</span><br><span class="line">		<span class="built_in">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	int i = 1;</span><br><span class="line">	<span class="keyword">while</span> (i &lt; location &amp;&amp; <span class="built_in">head</span>-&gt;next != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">head</span> = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	p-&gt;next = <span class="built_in">head</span>-&gt;next;</span><br><span class="line">	<span class="built_in">head</span>-&gt;next = p;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="💡Tips-4"><a href="#💡Tips-4" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>因为你要修改指针，所以要传指针的指针。即你要修改什么，就传那个东西的指针。</li>
+<li>传指针和传值的区别：<br>  🔍传指针：实际上传的是指针指向的某个变量的地址，那么你在函数体内修改指针，就是在修改这个地址储存的内容，是从根本上修改。<br>  🔍传值：在函数传参中，传值传参只是创建了该变量的副本，在函数体内的修改也只是对副本进行修改，并没有对本体造成实质性的改变。</li>
+</ul>
+<h2 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LNode* List_delete(LNode* L, int location)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* <span class="built_in">head</span> = L,*p = L;</span><br><span class="line"></span><br><span class="line">	int i = 1;</span><br><span class="line">	<span class="keyword">while</span> (i &lt; location-1 &amp;&amp; p != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	LNode* p1 = p-&gt;next;</span><br><span class="line">	p-&gt;next = p1-&gt;next;</span><br><span class="line">	free(p1);</span><br><span class="line">	<span class="built_in">return</span> <span class="built_in">head</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="返回指定位置的元素"><a href="#返回指定位置的元素" class="headerlink" title="返回指定位置的元素"></a>返回指定位置的元素</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LNode* Get_location(LNode* L, int value)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = L;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (p != NULL &amp;&amp; p-&gt;key != value)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (p == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;该节点不存在\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="删除指定值的第一个节点"><a href="#删除指定值的第一个节点" class="headerlink" title="删除指定值的第一个节点"></a>删除指定值的第一个节点</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void Delete_pointed_key(LNode** L, int value)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = *L;</span><br><span class="line">	LNode* q=NULL;</span><br><span class="line">	<span class="keyword">while</span> (p-&gt;next != NULL &amp;&amp; p-&gt;key != value)</span><br><span class="line">	&#123;</span><br><span class="line">		q = p;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (q == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		*L = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">	&#123;</span><br><span class="line">		q-&gt;next = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	free(p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="删除指定值的所有节点"><a href="#删除指定值的所有节点" class="headerlink" title="删除指定值的所有节点"></a>删除指定值的所有节点</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">void Delete_pointed_key_all(LNode** L, int value)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = *L;</span><br><span class="line">	LNode* q = NULL;</span><br><span class="line">	<span class="keyword">while</span> (p != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		//检查头节点key是否等于value</span><br><span class="line">		<span class="keyword">if</span> (p-&gt;key == value)</span><br><span class="line">		&#123;</span><br><span class="line">			LNode* tmp = p;</span><br><span class="line">			p = p-&gt;next;</span><br><span class="line">			<span class="keyword">if</span> (q == NULL)//说明此时是头指针</span><br><span class="line">			&#123;</span><br><span class="line">				*L = p;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				q-&gt;next = p;</span><br><span class="line">				free(tmp);</span><br><span class="line">			&#125;</span><br><span class="line">			free(tmp);</span><br><span class="line">			//将头节点指针移到下一个节点</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			q = p;</span><br><span class="line">			p = p-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="💡Tips-5"><a href="#💡Tips-5" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>（一些心理话）链表的代码其实就是在描述链表移动增删查改的过程。后续如果有机会，做一个链表的动画，这样搭配代码食用更佳。</li>
+</ul>
+<h2 id="合并有序数组"><a href="#合并有序数组" class="headerlink" title="合并有序数组"></a>合并有序数组</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#改进版</span></span><br><span class="line">LNode* Merge_linked_list(LNode* L1, LNode* L2)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = L1, * q = L2;</span><br><span class="line">	LNode* r=(LNode*)malloc(sizeof(LNode));//创建虚拟头节点</span><br><span class="line">	r-&gt;next = NULL;</span><br><span class="line">	<span class="keyword">while</span>(p != NULL &amp;&amp; q != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (p-&gt;key &lt; q-&gt;key)</span><br><span class="line">		&#123;</span><br><span class="line">			r-&gt;next = p;</span><br><span class="line">			p = p-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (p-&gt;key &gt; q-&gt;key)</span><br><span class="line">		&#123;</span><br><span class="line">			r-&gt;next = q;</span><br><span class="line">			q = q-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			r-&gt;next = p;</span><br><span class="line">			LNode* tmp = q;</span><br><span class="line">			p = p-&gt;next;</span><br><span class="line">			q = q-&gt;next;</span><br><span class="line">			free(tmp);</span><br><span class="line">		&#125;</span><br><span class="line">		r = r -&gt; next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (p == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		r-&gt;next = q;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		r-&gt;next = p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> L1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#原版</span></span><br><span class="line">LNode* Merge_linked_list(LNode* L1, LNode* L2)</span><br><span class="line">&#123;</span><br><span class="line">	LNode* p = L1, * q = L2, *r = L1;</span><br><span class="line">	<span class="keyword">while</span>(p != NULL &amp;&amp; q != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (p-&gt;key &lt; q-&gt;key)</span><br><span class="line">		&#123;</span><br><span class="line">			r = p;</span><br><span class="line">			p = p-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (p-&gt;key &gt; q-&gt;key)</span><br><span class="line">		&#123;</span><br><span class="line">			r = q;</span><br><span class="line">			q = q-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			r = p;</span><br><span class="line">			LNode* tmp = q;</span><br><span class="line">			p = p-&gt;next;</span><br><span class="line">			q = q-&gt;next;</span><br><span class="line">			free(tmp);</span><br><span class="line">		&#125;</span><br><span class="line">		r = r -&gt; next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (p == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		r-&gt;next = q;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		r-&gt;next = p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> L1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="💡Tips-6"><a href="#💡Tips-6" class="headerlink" title="💡Tips"></a>💡Tips</h3><p>原版的问题主要出于逻辑上的漏洞。</p>
+<ul>
+<li>原版想实现的逻辑是将两个链表合并到其中一个链表中。<ul>
+<li><strong>r&#x3D;p</strong> 或者 <strong>r&#x3D;q</strong>都是想将当前节点赋给链表r中，但因为后续有 <strong>r&#x3D;r-&gt;next</strong> ，上述赋值会导致r向p或者q的链表移动，不太准确。</li>
+</ul>
+</li>
+<li>改进版同样实现了这个逻辑，但语法更健壮。<ul>
+<li>先初始化r为虚拟头节点，注意此时r后续会连接节点，即要存储内容，所以r要初始化且开辟内存空间。</li>
+<li>将原版改成了 <strong>r-&gt;next&#x3D;p</strong> 以及 <strong>r-&gt;next&#x3D;q</strong> ，就不会出现r沿p或者q的链表移动的情况。因为r始终在两个节点的前一个节点，用 r-&gt;next 的话只需要置身“链”外选择下一个节点，而不会让自身处在两个链表里干涉选择。</li>
+</ul>
+</li>
+</ul>
+<h2 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	LNode* list = Create_a_list();</span><br><span class="line">	Print_a_list(list);</span><br><span class="line">	int length=Get_length(list);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,length);</span><br><span class="line">	Get_value(list, 3);</span><br><span class="line">	Delete_a_list(list);</span><br><span class="line">	LNode* list2 = Create_a_list();</span><br><span class="line">	list2=List_insert(list2, 7, 1);</span><br><span class="line">	list_insert(&amp;list2,7,1);</span><br><span class="line">	Print_a_list(list2);</span><br><span class="line">	list2=List_delete(list2, 3);</span><br><span class="line">	Print_a_list(list2);</span><br><span class="line">	Delete_pointed_key(&amp;list2, 7);</span><br><span class="line">	Print_a_list(list2);</span><br><span class="line">	Delete_pointed_key_all(&amp;list2, 3);</span><br><span class="line">	Print_a_list(list2);</span><br><span class="line">	list=Merge_linked_list(list, list2);</span><br><span class="line">	Print_a_list(list);</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="💡Tips-7"><a href="#💡Tips-7" class="headerlink" title="💡Tips"></a>💡Tips</h3><ul>
+<li>返回类型不为空时，要有相同类型的对象“去接住这个函数的返回结果”。e.g. list2&#x3D;List_insert(list2, 7, 1);中的list2。</li>
+</ul>
+<h1 id="啰哩巴嗦的总结"><a href="#啰哩巴嗦的总结" class="headerlink" title="啰哩巴嗦的总结"></a>啰哩巴嗦的总结</h1><p>以下几点是链表中最常出错的地方：</p>
+<ul>
+<li>创建链表时是否保留了虚拟头节点。因为本文<a href="#%E5%88%9B%E5%BB%BA%E9%93%BE%E8%A1%A8">创建链表</a>返回的是有效而非虚拟头节点指针，所以在链表的其他操作中有时会预先定义虚拟头节点。（一通写下来似乎有虚拟头节点更方便🤔）</li>
+<li>如果创建的指针有内容要存储（例如该指针会插入链表），那么一定要初始化分配内存空间。如果只是复制其他头节点指针，则不需要开辟空间。</li>
+<li>特别注意不要直接移动链表原初的头节点，先复制保存头结点指针值，再进行操作（例如<a href="#%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9">删除节点</a>）。直接移动指针值的话就很容易意识不到头节点的改变。</li>
+<li>用两个指针并行移动，一个负责记录和保存，另一个负责删改和变换。</li>
+<li>在对链表元素有增删时，有两种方式，一种是传头节点指针的指针，返回类型为空；一种是传头节点指针，返回类型为指针（返回改动后链表的头节点指针）。（详见<a href="#%E6%8F%92%E5%85%A5%E5%85%83%E7%B4%A0">插入元素</a>。）</li>
+<li>安全性检查十分重要。当遍历链表时很容易超出链表范围，用上判断条件 <strong>p!&#x3D;NULL</strong> 就会有保障得多。</li>
+<li>哦对了，还有一个小点，传指针的指针时，要记得取指针的地址！！！</li>
+</ul>
+<h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>心得就是<del>没有心得。</del><br>感觉自己在有些方面还是考虑不周，或者思路十分怪异导致代码实现起来很拧巴。<br>还有就是链表的范围取定，很容易报错呢哈哈哈。<br>Anyway，温故常新。<br>要想学得好，多做多思考！（向刘红salute🫡）</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Linked_List (finished)</li>
+        <li><strong>Author:</strong> Pomni</li>
+        <li><strong>Created at
+                :</strong> 2024-09-19 20:59:42</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-09-22 17:35:26
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2024/09/19/Linked-List/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/tech/">#tech</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/10/12/Stack_and_Queue/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">Stack_and_Queue</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/09/19/GetQzonehistory/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">GetQzonehistory</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div class="twikoo-container">
+        <script data-swup-reload-script
+                src='https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.10/twikoo.all.min.js'
+        ></script>
+        <div id="twikoo-comment"></div>
+        <script data-swup-reload-script>
+            function loadTwikoo() {
+                twikoo.init({
+                    el: '#twikoo-comment',
+                    envId: 'https://www.pomni.fun/',
+                });
+            }
+
+            if ('true') {
+                const loadTwikooTimeout = setTimeout(() => {
+                    loadTwikoo();
+                    clearTimeout(loadTwikooTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadTwikoo);
+            }
+        </script>
+    </div>
+
+
+        
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">Linked_List (finished)</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8A%E4%BB%A3%E7%A0%81"><span class="nav-text">直接上代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%93%BE%E8%A1%A8"><span class="nav-text">创建链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8"><span class="nav-text">打印链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8"><span class="nav-text">删除链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-1"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E9%93%BE%E8%A1%A8%E9%95%BF%E5%BA%A6"><span class="nav-text">返回链表长度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-2"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E9%93%BE%E8%A1%A8%E8%8A%82%E7%82%B9%E5%80%BC"><span class="nav-text">返回链表节点值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-3"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%85%83%E7%B4%A0"><span class="nav-text">插入元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-4"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9"><span class="nav-text">删除节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-text">返回指定位置的元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%8C%87%E5%AE%9A%E5%80%BC%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%8A%82%E7%82%B9"><span class="nav-text">删除指定值的第一个节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%8C%87%E5%AE%9A%E5%80%BC%E7%9A%84%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9"><span class="nav-text">删除指定值的所有节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-5"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84"><span class="nav-text">合并有序数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-6"><span class="nav-text">💡Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#main%E5%87%BD%E6%95%B0"><span class="nav-text">main函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%A1Tips-7"><span class="nav-text">💡Tips</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%95%B0%E5%93%A9%E5%B7%B4%E5%97%A6%E7%9A%84%E6%80%BB%E7%BB%93"><span class="nav-text">啰哩巴嗦的总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%83%E5%BE%97"><span class="nav-text">心得</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">Thank u, guys!</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Pomni</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        8 posts in total
+                    </span>
+                    
+                        <span>
+                            10.4k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/libs/anime.min.js"></script>
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Pomni">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/12/02/tree-and-binary-tree/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="反复地看！反复地敲！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chapter5_Tree_an_Binary_Tree">
+<meta property="og:url" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="反复地看！反复地敲！">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.jpg">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E8%BF%90%E7%AE%97%E5%BC%8F%E4%BA%8C%E5%8F%89%E6%A0%91.jpg">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86P.png">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86P.png">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86P.png">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E6%A0%91%E5%8F%8A%E5%8F%8C%E4%BA%B2%E8%A1%A8%E7%A4%BA.jpg">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E5%AD%A9%E5%AD%90%E9%93%BE%E8%A1%A8.jpg">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E6%A0%91%E7%9A%84%E4%BA%8C%E5%8F%89%E9%93%BE%E8%A1%A8.jpg">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E6%A0%91%E7%9A%84%E4%BA%8C%E5%8F%89%E9%93%BE%E8%A1%A8.jpg">
+<meta property="og:image" content="http://example.com/2024/12/02/Tree-and-Binary-Tree/source/images/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E6%9E%84%E9%80%A0.jpg">
+<meta property="article:published_time" content="2024-12-02T06:55:23.000Z">
+<meta property="article:modified_time" content="2024-12-03T13:11:11.305Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="tech">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.jpg">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Chapter5_Tree_an_Binary_Tree -
+        
+        Pomni&#39;s Home
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/background.webp","dark":"/images/background.webp"},"title":"Carpe Diem","subtitle":{"text":["P0mn1_n3v3r_j4d3d","Right?..."],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.0","navbar":{"auto_hide":true,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"https://www.xiaohongshu.com/user/profile/5d15efcb00000000110006cd?xhsshare=CopyLink&appuid=5d15efcb00000000110006cd&apptime=1725501303&share_id=d236afa6d86049d2b01742520bb8f96a","Github":"https://github.com/bcuej"}},"Links":{"icon":"fa-regular fa-link"}},"search":{"enable":false,"preload":true},"tags":{"Tag":null}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/9/4 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Pomni&#39;s Home
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/5d15efcb00000000110006cd?xhsshare=CopyLink&appuid=5d15efcb00000000110006cd&apptime=1725501303&share_id=d236afa6d86049d2b01742520bb8f96a">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/bcuej">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/5d15efcb00000000110006cd?xhsshare=CopyLink&appuid=5d15efcb00000000110006cd&apptime=1725501303&share_id=d236afa6d86049d2b01742520bb8f96a">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/bcuej">GITHUB</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-regular fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Chapter5_Tree_an_Binary_Tree</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Pomni</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-12-02 14:55:23</span>
+        <span class="mobile">2024-12-02 14:55:23</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-12-03 21:11:11</span>
+            <span class="mobile">2024-12-03 21:11:11</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/tech/">tech</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.8k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>16 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>树。。。<br>嗯。。。  </p>
+<p>（先按照书上的结构，感觉还是挺清晰的hhh。）</p>
+<h1 id="5-1-树和二叉树的定义"><a href="#5-1-树和二叉树的定义" class="headerlink" title="5.1 树和二叉树的定义"></a>5.1 树和二叉树的定义</h1><h2 id="5-1-1-树的定义"><a href="#5-1-1-树的定义" class="headerlink" title="5.1.1 树的定义"></a>5.1.1 树的定义</h2><ul>
+<li><p><strong>树</strong>：n个节点的有限集。<br>  （1）有且只有一个根节点。<br>  （2）其余节点互不相交。成为根的子树。  </p>
+<p>  💡树的结构定义是递归的定义。</p>
+</li>
+<li><p><strong>树的表示方式</strong><br>  （1）嵌套集合（图a）<br>  （2）广义表（图b）<br>  （3）凹入表示法（图c）</p>
+  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/树的表示方法.jpg"
+                      width="200" height="200"
+                ></li>
+</ul>
+<h2 id="5-1-2-树的基本术语"><a href="#5-1-2-树的基本术语" class="headerlink" title="5.1.2 树的基本术语"></a>5.1.2 树的基本术语</h2><p>见书P107-108<br>（懒得敲）<br>注：“双亲”改为<strong>父亲</strong></p>
+<h2 id="5-1-3-二叉树的定义"><a href="#5-1-3-二叉树的定义" class="headerlink" title="5.1.3 二叉树的定义"></a>5.1.3 二叉树的定义</h2><ul>
+<li><strong>二叉树</strong>:<br>（1）有且只有一个根节点<br>（2）其余节点分为两个互不相交的子集T1和T2。T1和T2本身又是二叉树。<br>💡：二叉树的子树有次序不能颠倒。</li>
+</ul>
+<h1 id="5-2-案例引入"><a href="#5-2-案例引入" class="headerlink" title="5.2 案例引入"></a>5.2 案例引入</h1><h2 id="1️⃣-数据压缩"><a href="#1️⃣-数据压缩" class="headerlink" title="1️⃣ 数据压缩"></a>1️⃣ 数据压缩</h2><p>💡<strong>哈夫曼编码</strong>（详见<a href="#57-%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8">5.7节</a>）</p>
+<h2 id="2️⃣-二叉树求解表达式的值"><a href="#2️⃣-二叉树求解表达式的值" class="headerlink" title="2️⃣ 二叉树求解表达式的值"></a>2️⃣ 二叉树求解表达式的值</h2><ul>
+<li>叶子节点为运算操作数，根节点为运算符。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\运算式二叉树.jpg"
+                      width="200" height="200"
+                ></li>
+</ul>
+<h1 id="5-3-树和二叉树的抽象数据类型定义"><a href="#5-3-树和二叉树的抽象数据类型定义" class="headerlink" title="5.3 树和二叉树的抽象数据类型定义"></a>5.3 树和二叉树的抽象数据类型定义</h1><h1 id="5-4-二叉树的性质和存储结构"><a href="#5-4-二叉树的性质和存储结构" class="headerlink" title="5.4 二叉树的性质和存储结构"></a>5.4 二叉树的性质和存储结构</h1><h2 id="5-4-1-性质"><a href="#5-4-1-性质" class="headerlink" title="5.4.1 性质"></a>5.4.1 性质</h2><ul>
+<li>性质一：第i层至多有2<sup>i-1</sup>个节点。  </li>
+<li>性质二：深度为k的二叉树至多有2<sup>k</sup>-1个节点。</li>
+<li>性质三：度为0的节点数为n<sub>0</sub>，度为2的节点数为n<sub>2</sub>，则n<sub>0</sub>&#x3D;n<sub>2</sub>+1。</li>
+</ul>
+<h3 id="特殊二叉树"><a href="#特殊二叉树" class="headerlink" title="特殊二叉树"></a>特殊二叉树</h3><ul>
+<li><p>满二叉树：深度为k且含有2<sub>k</sub>-1个节点。</p>
+</li>
+<li><p>完全二叉树：深度为k，有n个节点，当且仅当每一个节点都与深度为k的满二叉树中1至n的节点一一对应。</p>
+<ul>
+<li>特点：<br>  （1）叶子节点只在最大的两层上出现。<br>  （2）右分支子孙最大层次为l，左分支子孙最大层次为l或l+1。</li>
+</ul>
+</li>
+<li><p>性质四：具有n个节点的完全二叉树深度为(\lfloor \log_{2}n \rfloor)+1。</p>
+</li>
+<li><p>性质五：对一棵有n个节点的完全二叉树，对任一节点i，有：<br>  （1）i&#x3D;1，是根节点；i&gt;1，(\lfloor i&#x2F;2 \rfloor)是其父亲结点。<br>  （2）节点i，若2i&gt;n，则无左孩子；否则，i的左孩子为2<br>  i。<br>  （3）节点i，若2i+1&gt;n，则无左孩子；否则，i的左孩子为2<br>  i+1。</p>
+</li>
+</ul>
+<h2 id="5-4-2-存储结构"><a href="#5-4-2-存储结构" class="headerlink" title="5.4.2 存储结构"></a>5.4.2 存储结构</h2><h3 id="1-顺序存储结构"><a href="#1-顺序存储结构" class="headerlink" title="1. 顺序存储结构"></a>1. 顺序存储结构</h3><ul>
+<li>完全二叉树：自上而下，自左至右。节点i放入数组中i-1的位置。</li>
+<li>一般二叉树：节点i放入数组中i-1的位置。中间不存在的节点用0占位。</li>
+</ul>
+<p>🌟顺序存储结构适合完全二叉树。<br>🚨最坏的情况：深度为k且只有k个节点的单支树，需要2<sup>k</sup>-1的一维数组。</p>
+<h3 id="2-链式存储结构"><a href="#2-链式存储结构" class="headerlink" title="2. 链式存储结构"></a>2. 链式存储结构</h3><ul>
+<li><p>二叉链表<br>域：数据域和左、右指针域<br>空域：n个节点有n+1个空链域（&#x3D;&gt;线索链表）</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    BiTNode *lchild, *rchild;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>三叉链表<br>域：数据域，父亲指针域，左、右指针域<br>优势：便于寻找节点x的父亲</p>
+</li>
+</ul>
+<h1 id="5-5-遍历二叉树和线索二叉树"><a href="#5-5-遍历二叉树和线索二叉树" class="headerlink" title="5.5 遍历二叉树和线索二叉树"></a>5.5 遍历二叉树和线索二叉树</h1><h2 id="5-5-1-遍历"><a href="#5-5-1-遍历" class="headerlink" title="5.5.1 遍历"></a>5.5.1 遍历</h2><h3 id="1-遍历算法"><a href="#1-遍历算法" class="headerlink" title="1.遍历算法"></a>1.遍历算法</h3><p>遍历实质：对二叉树进行线性化。</p>
+<h4 id="递归遍历"><a href="#递归遍历" class="headerlink" title="递归遍历"></a>递归遍历</h4><ul>
+<li>先序遍历：根左右<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PreOrderTraverse</span><span class="params">(BiTNode* T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;T-&gt;data;</span><br><span class="line">        InOrderTraverse(T-&gt;lchild);</span><br><span class="line">        InOrderTraverse(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+<li>中序遍历：左根右<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">InOrderTraverse</span><span class="params">(BiTNode* T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T)</span><br><span class="line">    &#123;</span><br><span class="line">        InOrderTraverse(T-&gt;lchild);</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;T-&gt;data;</span><br><span class="line">        InOrderTraverse(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+<li>后序遍历：左右根<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">InOrderTraverse</span><span class="params">(BiTNode* T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T)</span><br><span class="line">    &#123;</span><br><span class="line">        InOrderTraverse(T-&gt;lchild);</span><br><span class="line">        InOrderTraverse(T-&gt;rchild);</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;T-&gt;data;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h4 id="非递归遍历"><a href="#非递归遍历" class="headerlink" title="非递归遍历"></a>非递归遍历</h4><p>递归工作栈：<br>（1）工作记录：递归调用的语句编号以及指向根节点的指针。栈顶记录的指针非空，则遍历左子树（左子树指针进栈）。<br>（2）栈顶指针为空，则退回上一层。从左子树返回，则访问根节点。<br>（3）从右子树返回，则退栈。遍历右子树时不需要保存当前层的根指针，直接修改栈顶指针即可。</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">InOrderTraverse</span><span class="params">(BiTNode* T)</span></span><br><span class="line">&#123;</span><br><span class="line">    InitialStack(S); <span class="comment">//创建空栈</span></span><br><span class="line">    BiTNode* p=T;</span><br><span class="line">    BiTNode* q=new BiTNode;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(q||!isEmptyStack())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(p)</span><br><span class="line">        &#123;</span><br><span class="line">            Push(S,p);</span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            Pop(S,q); <span class="comment">//左孩子和根节点被弹出</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;q-&gt;data;</span><br><span class="line">            p=q-&gt;rchild; <span class="comment">//遍历右孩子</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>算法时间复杂度：<em>O(n)</em></p>
+<ul>
+<li>层次遍历：从左到右，从上至下。<br>🌟非递归结构，借助队列实现</li>
+</ul>
+<h3 id="2-根据遍历序列确定二叉树"><a href="#2-根据遍历序列确定二叉树" class="headerlink" title="2. 根据遍历序列确定二叉树"></a>2. 根据遍历序列确定二叉树</h3><p>先序加中序$\Rightarrow$唯一确定<br>后序加中序$\Rightarrow$唯一确定</p>
+<h3 id="3-二叉树遍历算法的应用"><a href="#3-二叉树遍历算法的应用" class="headerlink" title="3. 二叉树遍历算法的应用"></a>3. 二叉树遍历算法的应用</h3><ul>
+<li><p><strong>创建</strong>二叉树的存储结构———二叉链表</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按照先序遍历算法创建链表</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CreateBiTree</span><span class="params">(BiTNode*&amp; T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> ch;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line">    <span class="keyword">if</span>(ch==<span class="string">&#x27;#&#x27;</span>)</span><br><span class="line">        *T=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    &#123;</span><br><span class="line">        T=new BiTNode;</span><br><span class="line">        T-&gt;data=ch;</span><br><span class="line">        T-&gt;lchild=<span class="literal">NULL</span>;</span><br><span class="line">        T-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line">        CreateBiTree(T-&gt;lchild);</span><br><span class="line">        CreateBiTree(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>复制</strong>二叉树：申请新节点空间，复制节点；递归复制左右子树节点。</p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">CopyTree</span><span class="params">(BiTNode* T, BiTNode*&amp; NewT)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        NewT=<span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    NewT=new BiTNode;</span><br><span class="line">    NewT-&gt;data=T-&gt;data;</span><br><span class="line">    CopyTree(T-&gt;lchild,NewT-&gt;lchild);</span><br><span class="line">    CopyTree(T-&gt;rchild,NewT-&gt;rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>计算二叉树的<strong>深度</strong></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">getDepth</span><span class="params">(BiTNode* T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> left=getDepth(T-&gt;lchild);</span><br><span class="line">    <span class="type">int</span> right=getDepth(T-&gt;rchild);</span><br><span class="line">    <span class="keyword">return</span> left&gt;right?left+<span class="number">1</span>:right+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>统计节点<strong>总个数</strong></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">nodesNum</span><span class="params">(BiTNode* T)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> nodesNum(T-&gt;lchild)+nodesNum(T-&gt;rchild)+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="5-5-2-线索二叉树"><a href="#5-5-2-线索二叉树" class="headerlink" title="5.5.2 线索二叉树"></a>5.5.2 线索二叉树</h2><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><p>遍历二叉树是将二叉树节点排列成线性序列，这个线性序列中有且仅有一个直接前驱和直接后继。<br><u>n个节点二叉链表必定有n+1个空链域。</u>$\Rightarrow$ 利用空链域存放节点前驱和后继信息。</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="type">int</span> lflag,rflag;</span><br><span class="line">    Node *lchild, *rchild;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<p>$$<br>    lflag&#x3D;<br>    \begin{cases}<br>        0 \quad lchild指示左孩子\<br>        1 \quad lchild指示前驱<br>    \end{cases}<br>$$  </p>
+<p>$$<br>    rflag&#x3D;<br>    \begin{cases}<br>        0 \quad lchild指示右孩子\<br>        1 \quad lchild指示后继<br>    \end{cases}<br>$$</p>
+<p>相关概念：</p>
+<ul>
+<li>线索链表</li>
+<li>线索：指向节点前驱和后继的指针</li>
+<li>线索二叉树</li>
+<li>线索化</li>
+</ul>
+<p>例：中序线索二叉树<br>创建一个头节点，lchild指向根节点，rchild指向最后一个节点。<br>中序遍历第一个节点lchild和最后一个节点rchild指向头节点。<br>$\Rightarrow$创建了一个双向线索链表。</p>
+<h3 id="2-构造"><a href="#2-构造" class="headerlink" title="2. 构造"></a>2. 构造</h3><p>线索化过程是在遍历中修改空指针$\Rightarrow$递归。<br>指针pre指向刚刚访问过的节点，指针T指向当前访问的节点。</p>
+<h4 id="不带头结点"><a href="#不带头结点" class="headerlink" title="不带头结点"></a>不带头结点</h4><h5 id="先序线索二叉树"><a href="#先序线索二叉树" class="headerlink" title="先序线索二叉树"></a>先序线索二叉树</h5><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">Node* pre=<span class="keyword">new</span> Node;<span class="comment">//pre是全局变量</span></span><br><span class="line">pre-&gt;lchild=<span class="literal">NULL</span>;</span><br><span class="line">pre-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InThreading</span><span class="params">(Node* T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(!T-&gt;lchild)<span class="comment">//当前节点没有左孩子</span></span><br><span class="line">        &#123;</span><br><span class="line">            T-&gt;lflag=<span class="number">1</span>;</span><br><span class="line">            T-&gt;lchild=pre;<span class="comment">//连接前驱。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            T-&gt;lflag=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!pre-&gt;rchild)<span class="comment">//前驱没有右孩子</span></span><br><span class="line">        &#123;</span><br><span class="line">            pre-&gt;rflag=<span class="number">1</span>;</span><br><span class="line">            pre-&gt;rchild=T;<span class="comment">//连接后继</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            pre-&gt;rflag=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        pre=T;<span class="comment">//更新pre</span></span><br><span class="line">        <span class="built_in">InThreading</span>(T-&gt;lchild);<span class="comment">//遍历左子树</span></span><br><span class="line">        <span class="built_in">InThreading</span>(T-&gt;rchild);<span class="comment">//遍历右子树</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+<h5 id="中序线索二叉树"><a href="#中序线索二叉树" class="headerlink" title="中序线索二叉树"></a>中序线索二叉树</h5><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Node* pre=<span class="keyword">new</span> Node;<span class="comment">//pre是全局变量</span></span><br><span class="line">pre-&gt;lchild=<span class="literal">NULL</span>;</span><br><span class="line">pre-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InThreading</span><span class="params">(Node* T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">InThreading</span>(T-&gt;lchild);<span class="comment">//遍历左子树</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!T-&gt;lchild)<span class="comment">//当前节点没有左孩子</span></span><br><span class="line">        &#123;</span><br><span class="line">            T-&gt;lflag=<span class="number">1</span>;</span><br><span class="line">            T-&gt;lchild=pre;<span class="comment">//连接前驱。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            T-&gt;lflag=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!pre-&gt;rchild)<span class="comment">//前驱没有右孩子</span></span><br><span class="line">        &#123;</span><br><span class="line">            pre-&gt;rflag=<span class="number">1</span>;</span><br><span class="line">            pre-&gt;rchild=T;<span class="comment">//连接后继</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            pre-&gt;rflag=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        pre=T;<span class="comment">//更新pre</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">InThreading</span>(T-&gt;rchild);<span class="comment">//遍历右子树</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="后序线索二叉树"><a href="#后序线索二叉树" class="headerlink" title="后序线索二叉树"></a>后序线索二叉树</h5><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Node* pre=<span class="keyword">new</span> Node;<span class="comment">//pre是全局变量</span></span><br><span class="line">pre-&gt;lchild=<span class="literal">NULL</span>;</span><br><span class="line">pre-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InThreading</span><span class="params">(Node* T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">InThreading</span>(T-&gt;lchild);<span class="comment">//遍历左子树</span></span><br><span class="line">    <span class="built_in">InThreading</span>(T-&gt;rchild);<span class="comment">//遍历右子树</span></span><br><span class="line">    <span class="keyword">if</span>(T)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(!T-&gt;lchild)<span class="comment">//当前节点没有左孩子</span></span><br><span class="line">        &#123;</span><br><span class="line">            T-&gt;lflag=<span class="number">1</span>;</span><br><span class="line">            T-&gt;lchild=pre;<span class="comment">//连接前驱。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            T-&gt;lflag=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!pre-&gt;rchild)<span class="comment">//前驱没有右孩子</span></span><br><span class="line">        &#123;</span><br><span class="line">            pre-&gt;rflag=<span class="number">1</span>;</span><br><span class="line">            pre-&gt;rchild=T;<span class="comment">//连接后继</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            pre-&gt;rflag=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        pre=T;<span class="comment">//更新pre</span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>😅其实先序和后序就是把递归的函数位置变了一下。敲完整代码只是为了显得牛逼。</p>
+<h4 id="带头节点"><a href="#带头节点" class="headerlink" title="带头节点"></a>带头节点</h4><p>以中序遍历为例</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Node* pre=<span class="keyword">new</span> Node;<span class="comment">//pre是全局变量</span></span><br><span class="line">pre-&gt;lchild=<span class="literal">NULL</span>;</span><br><span class="line">pre-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InOrderThreading</span><span class="params">(Node*&amp; head, Node T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    head=<span class="keyword">new</span> Node;</span><br><span class="line">    head-&gt;lflag=<span class="number">0</span>;</span><br><span class="line">    head-&gt;rflag=<span class="number">1</span>;</span><br><span class="line">    head-&gt;rchild=head;<span class="comment">//初始时指向自己</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="comment">//树为空</span></span><br><span class="line">    &#123;</span><br><span class="line">        T-&gt;lchild=T;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        head-&gt;lchild=T;</span><br><span class="line">        pre=head;</span><br><span class="line">        <span class="built_in">InThreading</span>(T);<span class="comment">//调用不带头节点的算法</span></span><br><span class="line">        pre-&gt;rchild=head;</span><br><span class="line">        pre-&gt;rflag=<span class="number">1</span>;</span><br><span class="line">        head-&gt;rchild=pre;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-遍历"><a href="#3-遍历" class="headerlink" title="3. 遍历"></a>3. 遍历</h3><h4 id="先序遍历"><a href="#先序遍历" class="headerlink" title="先序遍历"></a>先序遍历</h4><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\先序遍历P.png"
+                      width="600" height="200"
+                >
+
+<h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\中序遍历P.png"
+                      width="600" height="200"
+                >
+
+<ul>
+<li>算法<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">InOrderTraverse_Thread</span><span class="params">(Node* T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node* p=T-&gt;lchild;</span><br><span class="line">    <span class="keyword">while</span>(p!=T)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(p-&gt;lflag==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;p-&gt;data;</span><br><span class="line">        <span class="keyword">while</span>(p-&gt;rflag==<span class="number">1</span>&amp;&amp;p-&gt;rchild!=T)</span><br><span class="line">        &#123;</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">            cout&lt;&lt;p-&gt;data;</span><br><span class="line">        &#125;</span><br><span class="line">        p=p-&gt;rchild;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<p>💡时间复杂度 *O(n)*，空间复杂度 <em>O(1)</em> </p>
+<h4 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h4><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\后序遍历P.png"
+                      width="600" height="200"
+                >
+
+<h1 id="5-6-树和森林"><a href="#5-6-树和森林" class="headerlink" title="5.6 树和森林"></a>5.6 树和森林</h1><h2 id="5-6-1-树的存储结构"><a href="#5-6-1-树的存储结构" class="headerlink" title="5.6.1 树的存储结构"></a>5.6.1 树的存储结构</h2><ul>
+<li><p>双亲表示法</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="type">int</span> parent;<span class="comment">//存父亲的位置</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+<p>🚨求孩子时需要从头遍历</p>
+</li>
+<li><p>孩子表示法</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    Node *child1, *child2, *child3...;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+<p>🚨同构：存在浪费空间的问题<br>🚨不同构：操作不便</p>
+</li>
+</ul>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\树及双亲表示.jpg"
+                      width="400" height="200"
+                >
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\孩子链表.jpg"
+                      width="400" height="200"
+                >
+
+<ul>
+<li>孩子兄弟表示法<br>以二叉树的形式存储树。</li>
+</ul>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">CSNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    CSNode *firstchild, *nextsibling;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\树的二叉链表.jpg"
+                      width="200" height="300"
+                >
+
+<h2 id="5-6-2-森林与二叉树的转换"><a href="#5-6-2-森林与二叉树的转换" class="headerlink" title="5.6.2 森林与二叉树的转换"></a>5.6.2 森林与二叉树的转换</h2><h3 id="1-森林转换成二叉树"><a href="#1-森林转换成二叉树" class="headerlink" title="1. 森林转换成二叉树"></a>1. 森林转换成二叉树</h3><p>左孩子都是第一个孩子，右孩子以及右孩子的右孩子是兄弟。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\树的二叉链表.jpg"
+                      width="300" height="200"
+                ></p>
+<h3 id="2-二叉树转为森林"><a href="#2-二叉树转为森林" class="headerlink" title="2. 二叉树转为森林"></a>2. 二叉树转为森林</h3><p>右孩子以及右孩子的右孩子都是兄弟，左孩子都是第一个孩子。</p>
+<h2 id="5-6-3-树和森林的遍历"><a href="#5-6-3-树和森林的遍历" class="headerlink" title="5.6.3 树和森林的遍历"></a>5.6.3 树和森林的遍历</h2><h3 id="1-树的遍历"><a href="#1-树的遍历" class="headerlink" title="1. 树的遍历"></a>1. 树的遍历</h3><ul>
+<li><p>先根遍历<br>先访问根节点再依次访问子树</p>
+</li>
+<li><p>后根遍历<br>先依次后根遍历子树再访问根</p>
+</li>
+</ul>
+<h3 id="2-森林的遍历"><a href="#2-森林的遍历" class="headerlink" title="2. 森林的遍历"></a>2. 森林的遍历</h3><ul>
+<li><p>先序遍历<br>  （1）先访问第一棵树的根节点<br>  （2）先序遍历第一棵树<br>  （3）再先序遍历剩余树</p>
+</li>
+<li><p>中序遍历<br>  （1）中序遍历第一棵树<br>  （2）访问第一棵树的根节点<br>  （3）中序遍历剩余树</p>
+</li>
+</ul>
+<p>🌟树的先根遍历 $ \Leftrightarrow $ 二叉树先序遍历<br>🌟树的后根遍历 $ \Leftrightarrow $ 二叉树中序遍历</p>
+<h1 id="5-7-哈夫曼树及其应用"><a href="#5-7-哈夫曼树及其应用" class="headerlink" title="5.7 哈夫曼树及其应用"></a>5.7 哈夫曼树及其应用</h1><h2 id="5-7-1-基本概念"><a href="#5-7-1-基本概念" class="headerlink" title="5.7.1 基本概念"></a>5.7.1 基本概念</h2><ul>
+<li>哈夫曼树：带权路径长度最短的树。<br>概念详见书P131</li>
+</ul>
+<p>💡权值越大的节点离根节点越近。</p>
+<h2 id="5-7-2-哈夫曼树的构造算法"><a href="#5-7-2-哈夫曼树的构造算法" class="headerlink" title="5.7.2 哈夫曼树的构造算法"></a>5.7.2 哈夫曼树的构造算法</h2><h3 id="1-哈夫曼树的构造过程"><a href="#1-哈夫曼树的构造过程" class="headerlink" title="1. 哈夫曼树的构造过程"></a>1. 哈夫曼树的构造过程</h3><p>💡贪心算法<br>选取权值最小的两棵树作为左右子树构造二叉树，这棵二叉树的根是这两棵子树的权值之和。</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="source\images\哈夫曼树构造.jpg"
+                      width="250" height="300"
+                >
+
+<h3 id="2-哈夫曼算法实现"><a href="#2-哈夫曼算法实现" class="headerlink" title="2. 哈夫曼算法实现"></a>2. 哈夫曼算法实现</h3><p>💡观察<br>$ ~~~~~ $ n个叶子节点的哈夫曼树共2n-1个节点。<br>$ ~~~~~ $ 哈夫曼树中无度为1的节点。<br>$ ~~~~~ $ 数组存储✔️：数组大小 2n（a[0]不使用），前n个存叶子节点，后n-1个存非叶子。</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//哈夫曼树节点</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">HFNode</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> weight;</span><br><span class="line">    <span class="type">int</span> parent, lchild, rchild;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">select</span><span class="params">(HFNode* T,<span class="type">int</span> i,<span class="type">int</span>*&amp; p1, <span class="type">int</span>*&amp; p2)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//构造哈夫曼树</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CreateHFTree</span><span class="params">(HFNode*&amp; T, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化</span></span><br><span class="line">    m=<span class="number">2</span>*n<span class="number">-1</span>;</span><br><span class="line">    T=<span class="keyword">new</span> HFNode[m<span class="number">+1</span>];<span class="comment">//动态分配数组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//先全部初始化为0</span></span><br><span class="line">        T[i].parent=<span class="number">0</span>;</span><br><span class="line">        T[i].lchild=<span class="number">0</span>;</span><br><span class="line">        T[i].rchild=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;T[i].weight;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n<span class="number">+1</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//通过n-1次的选择，选择出权值最小的两棵树并保存其序号s1，s2。</span></span><br><span class="line">        <span class="type">int</span> *p1, *p2;</span><br><span class="line">        <span class="built_in">select</span>(T,i<span class="number">-1</span>,p1,p2);</span><br><span class="line">        T[*p1].parent=i;</span><br><span class="line">        T[*p2].parent=i;</span><br><span class="line">        T[i].lchild=*p1;</span><br><span class="line">        T[i].rchild=*p2;</span><br><span class="line">        T[i].weight=T[*p1].weight+T[*p2].weight;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//select函数的实现</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">select</span><span class="params">(HFNode* T,<span class="type">int</span> i,<span class="type">int</span>*&amp; p1, <span class="type">int</span>*&amp; p2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> min1=<span class="number">100</span>,min2=<span class="number">100</span>;</span><br><span class="line">    <span class="type">int</span> index1=<span class="number">-1</span>,index2=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">1</span>;k&lt;i;k++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(T[i].parent==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(T[k].weight&lt;min1)</span><br><span class="line">            &#123;</span><br><span class="line">                min2=min1;<span class="comment">//在min1更新前存min1的值，能使min2最终不等于min1</span></span><br><span class="line">                index2 = index1;<span class="comment">//同上</span></span><br><span class="line">                min1=T[k].weight;</span><br><span class="line">                index1=k;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(T[k].weight&lt;min2)</span><br><span class="line">            &#123;</span><br><span class="line">                min2=T[k].weight;</span><br><span class="line">                index2=k;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        p1=&amp;min1;</span></span><br><span class="line"><span class="comment">        p2=&amp;min2;</span></span><br><span class="line"><span class="comment">        min1 和 min2 只是局部变量，它们的地址并不是你需要返回的节点地址。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    p1=&amp;T[index1];</span><br><span class="line">    p2=&amp;T[index2];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="5-7-3-哈夫曼编码"><a href="#5-7-3-哈夫曼编码" class="headerlink" title="5.7.3 哈夫曼编码"></a>5.7.3 哈夫曼编码</h2><h3 id="1-编码思想"><a href="#1-编码思想" class="headerlink" title="1. 编码思想"></a>1. 编码思想</h3><ul>
+<li><p>相关概念</p>
+<ul>
+<li>前缀编码：任一编码都不是其他任何编码的前缀。</li>
+<li>哈夫曼编码：n个叶子的哈夫曼树，左分支赋0，右分支赋1。</li>
+</ul>
+</li>
+<li><p>性质</p>
+<ul>
+<li>哈夫曼编码是前缀编码。</li>
+<li>哈夫曼编码是最优前缀编码。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-编码算法"><a href="#2-编码算法" class="headerlink" title="2. 编码算法"></a>2. 编码算法</h3><p>由哈夫曼树到哈夫曼编码：<br>依次以叶子为出发点，向上回溯至根节点。走左分支生成0，右分支生成1。</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">CreateHFCode</span><span class="params">(HFNode* T, <span class="type">char</span>**&amp; hc, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    hc=<span class="keyword">new</span> <span class="type">char</span>*[n<span class="number">+1</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">//临时数组</span></span><br><span class="line">    <span class="type">char</span> *cd=<span class="keyword">new</span> <span class="type">char</span>[n];</span><br><span class="line">    cd[n<span class="number">-1</span>]=<span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> start=n<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> c=i;</span><br><span class="line">        <span class="type">int</span> f=T[i].parent;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//由叶子节点向上回溯</span></span><br><span class="line">        <span class="keyword">while</span>(f!=<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            --start;</span><br><span class="line">            <span class="keyword">if</span>(T[f].lchild==c)</span><br><span class="line">            &#123;</span><br><span class="line">                cd[start]=<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                cd[start]=<span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            c=f;</span><br><span class="line">            f=T[f].parent;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        hc[i]=<span class="keyword">new</span> <span class="type">char</span>[n-start];</span><br><span class="line">        <span class="built_in">strcpy</span>(hc[i], &amp;cd[start]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//临时数组记得销毁</span></span><br><span class="line">    <span class="keyword">delete</span> []cd;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-文件编码译码"><a href="#3-文件编码译码" class="headerlink" title="3. 文件编码译码"></a>3. 文件编码译码</h3><ul>
+<li>编码<br>依次读入字符，并对于哈夫曼编码表转换成对于编码串。</li>
+<li>译码<br>依次读入二进制码，从根节点出发。读入0，走左孩子，读入1，走右孩子。</li>
+</ul>
+<h1 id="5-8-案例分析"><a href="#5-8-案例分析" class="headerlink" title="5.8 案例分析"></a>5.8 案例分析</h1><h2 id="求解表达式的值"><a href="#求解表达式的值" class="headerlink" title="求解表达式的值"></a>求解表达式的值</h2><h3 id="表达式树的创建"><a href="#表达式树的创建" class="headerlink" title="表达式树的创建"></a>表达式树的创建</h3><p>思路：</p>
+<ul>
+<li>叶子节点为操作数，分支节点为运算符。</li>
+<li>创建工作栈：OPTR，暂存运算符；EXPT，暂存已建立好的表达式树的根节点。</li>
+</ul>
+<p>（每个表达式以”#”开始和结束）</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">InitExpTree</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    InitStack(EXPT);</span><br><span class="line">    InitStack(OPTR);</span><br><span class="line"></span><br><span class="line">    Push(OPTR, <span class="string">&#x27;#&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> ch;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(ch!=<span class="string">&#x27;#&#x27;</span>||GetTop(OPTR)!=<span class="string">&#x27;#&#x27;</span>)<span class="comment">//栈顶元素也不为&#x27;#&#x27;</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!In(ch))<span class="comment">//ch不是运算符</span></span><br><span class="line">        &#123;</span><br><span class="line">            CreateExpTree(T,<span class="literal">NULL</span>,<span class="literal">NULL</span>,ch);</span><br><span class="line">            Push(EXPT,T);</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">switch</span>(Precede(GetTop(OPTR),ch))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;&lt;&#x27;</span>:</span><br><span class="line">                    Push(OPTR,ch);</span><br><span class="line">                    <span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;&gt;&#x27;</span>:</span><br><span class="line">                    Pop(OPTR,theta);<span class="comment">//弹出OPTR栈顶运算符，并用theta存储</span></span><br><span class="line">                    Pop(EXPT,b);</span><br><span class="line">                    Pop(EXPT,a);<span class="comment">//弹出EXPT栈顶两个操作数</span></span><br><span class="line">                    CreateExpTree(T,a,b,theta);<span class="comment">//以theta为根，a为左子树，b为右子树，创建二叉树</span></span><br><span class="line">                    Push(EXPT,T);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;=&#x27;</span>:</span><br><span class="line">                    Pop(OPTR,x);</span><br><span class="line">                    <span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//初始化栈</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InitStack</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure></div>
+
+
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//压入栈</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回栈顶元素</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建ERPT表达式树</span></span><br><span class="line"> <span class="function"><span class="type">void</span> <span class="title">CreateExpTree</span><span class="params">(T,<span class="literal">NULL</span>,<span class="literal">NULL</span>,ch)</span></span></span><br><span class="line"><span class="function"></span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="built_in">Precede</span>(<span class="built_in">GetTop</span>(OPTR),ch)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>💡时间复杂度：<em>O(n)</em><br>$ ~~~~ $空间复杂度：<em>O(n)</em></p>
+<h3 id="表达式树求值"><a href="#表达式树求值" class="headerlink" title="表达式树求值"></a>表达式树求值</h3><p>思路：</p>
+<ul>
+<li>为叶子节点，则返回叶子节点的数值</li>
+<li>非叶子节点，递归计算左右子树的值</li>
+</ul>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">EvaluateTree</span><span class="params">(BiTNode* T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> lvalue=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> rvalue=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(T-&gt;lchild=<span class="literal">NULL</span>&amp;&amp;T-&gt;rchild==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> T-&gt;data-<span class="string">&#x27;0&#x27;</span>;<span class="comment">//因为入栈的是ascll字符，计算值需要用ascll码值相减</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        lvalue=<span class="built_in">EvaluateExpTree</span>(T-&gt;lchild);</span><br><span class="line">        rvalue=<span class="built_in">EvaluateExpTree</span>(T-&gt;rchild);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">GetValue</span>(T-&gt;data,lvalue,rvalue);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>💡时间复杂度和空间复杂度：<em>O(n)</em></p>
+<h1 id="Why-can’t-I-keep-high"><a href="#Why-can’t-I-keep-high" class="headerlink" title="Why can’t I keep high?"></a>Why can’t I keep high?</h1><p>12.3敲完。<br>照着敲都敲了两天。。。。。。<br>有好多还是记不得也没理解。。。。。。<br>可恶！</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Chapter5_Tree_an_Binary_Tree</li>
+        <li><strong>Author:</strong> Pomni</li>
+        <li><strong>Created at
+                :</strong> 2024-12-02 14:55:23</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-12-03 21:11:11
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2024/12/02/Tree-and-Binary-Tree/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/tech/">#tech</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/10/12/Stack_and_Queue/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">Stack_and_Queue</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div class="twikoo-container">
+        <script data-swup-reload-script
+                src='https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.10/twikoo.all.min.js'
+        ></script>
+        <div id="twikoo-comment"></div>
+        <script data-swup-reload-script>
+            function loadTwikoo() {
+                twikoo.init({
+                    el: '#twikoo-comment',
+                    envId: 'https://www.pomni.fun/',
+                });
+            }
+
+            if ('true') {
+                const loadTwikooTimeout = setTimeout(() => {
+                    loadTwikoo();
+                    clearTimeout(loadTwikooTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadTwikoo);
+            }
+        </script>
+    </div>
+
+
+        
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">Chapter5_Tree_an_Binary_Tree</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#5-1-%E6%A0%91%E5%92%8C%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">5.1 树和二叉树的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-1-%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">5.1.1 树的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-2-%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD"><span class="nav-text">5.1.2 树的基本术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-3-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">5.1.3 二叉树的定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-2-%E6%A1%88%E4%BE%8B%E5%BC%95%E5%85%A5"><span class="nav-text">5.2 案例引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%EF%B8%8F%E2%83%A3-%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9"><span class="nav-text">1️⃣ 数据压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%EF%B8%8F%E2%83%A3-%E4%BA%8C%E5%8F%89%E6%A0%91%E6%B1%82%E8%A7%A3%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%80%BC"><span class="nav-text">2️⃣ 二叉树求解表达式的值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-3-%E6%A0%91%E5%92%8C%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89"><span class="nav-text">5.3 树和二叉树的抽象数据类型定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-4-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%80%A7%E8%B4%A8%E5%92%8C%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-text">5.4 二叉树的性质和存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-1-%E6%80%A7%E8%B4%A8"><span class="nav-text">5.4.1 性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">特殊二叉树</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-2-%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-text">5.4.2 存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-text">1. 顺序存储结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-text">2. 链式存储结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-5-%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91%E5%92%8C%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">5.5 遍历二叉树和线索二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-1-%E9%81%8D%E5%8E%86"><span class="nav-text">5.5.1 遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95"><span class="nav-text">1.遍历算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%A0%B9%E6%8D%AE%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E7%A1%AE%E5%AE%9A%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">2. 根据遍历序列确定二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text">3. 二叉树遍历算法的应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-2-%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">5.5.2 线索二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">1. 基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9E%84%E9%80%A0"><span class="nav-text">2. 构造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%81%8D%E5%8E%86"><span class="nav-text">3. 遍历</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-6-%E6%A0%91%E5%92%8C%E6%A3%AE%E6%9E%97"><span class="nav-text">5.6 树和森林</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-1-%E6%A0%91%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-text">5.6.1 树的存储结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-2-%E6%A3%AE%E6%9E%97%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-text">5.6.2 森林与二叉树的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A3%AE%E6%9E%97%E8%BD%AC%E6%8D%A2%E6%88%90%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">1. 森林转换成二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%8C%E5%8F%89%E6%A0%91%E8%BD%AC%E4%B8%BA%E6%A3%AE%E6%9E%97"><span class="nav-text">2. 二叉树转为森林</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-3-%E6%A0%91%E5%92%8C%E6%A3%AE%E6%9E%97%E7%9A%84%E9%81%8D%E5%8E%86"><span class="nav-text">5.6.3 树和森林的遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86"><span class="nav-text">1. 树的遍历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%A3%AE%E6%9E%97%E7%9A%84%E9%81%8D%E5%8E%86"><span class="nav-text">2. 森林的遍历</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-7-%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8"><span class="nav-text">5.7 哈夫曼树及其应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">5.7.1 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-2-%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0%E7%AE%97%E6%B3%95"><span class="nav-text">5.7.2 哈夫曼树的构造算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0%E8%BF%87%E7%A8%8B"><span class="nav-text">1. 哈夫曼树的构造过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="nav-text">2. 哈夫曼算法实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-3-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81"><span class="nav-text">5.7.3 哈夫曼编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BC%96%E7%A0%81%E6%80%9D%E6%83%B3"><span class="nav-text">1. 编码思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BC%96%E7%A0%81%E7%AE%97%E6%B3%95"><span class="nav-text">2. 编码算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E8%AF%91%E7%A0%81"><span class="nav-text">3. 文件编码译码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-8-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-text">5.8 案例分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%82%E8%A7%A3%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%80%BC"><span class="nav-text">求解表达式的值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%A0%91%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-text">表达式树的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%A0%91%E6%B1%82%E5%80%BC"><span class="nav-text">表达式树求值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-can%E2%80%99t-I-keep-high"><span class="nav-text">Why can’t I keep high?</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">Thank u, guys!</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Pomni</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        8 posts in total
+                    </span>
+                    
+                        <span>
+                            10.4k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/libs/anime.min.js"></script>
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
